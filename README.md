@@ -96,8 +96,11 @@ Cache-Control: no-cache
 {}
 ```
 
-### Integration example (HTML + Code)
+### Integration example
+
 http://jsfiddle.net/5uuwqdzd/4/
+
+<iframe width="100%" height="300" src="//jsfiddle.net//5uuwqdzd/4/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## Customer update profile
 
