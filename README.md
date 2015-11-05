@@ -73,9 +73,13 @@ X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
 }
 ```
 
-### Integration example (HTML + Code)
+### Integration example
 
 http://jsfiddle.net/gng3o5sm/5/
+
+<iframe width="100%" height="300" src="//jsfiddle.net/gng3o5sm/5/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+
 
 ## Customer Facebook login
 
@@ -108,8 +112,11 @@ Cache-Control: no-cache
 { "jobTitle" : "Software Architect", "title" : "Ing", "hash" : "1234567" }
 ```
 
-### Integration example (HTML + Code)
+### Integration example
+
 http://jsfiddle.net/4gLLgw4s/1/
+
+<iframe width="100%" height="300" src="//jsfiddle.net/4gLLgw4s/1/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## Fire Interaction
 
@@ -124,8 +131,13 @@ Cache-Control: no-cache
 { "test" : "hola" }
 
 ```
-### Integration example (HTML + Code)
+### Integration example
+
+
 http://jsfiddle.net/4gLLgw4s/7/
+
+<iframe width="100%" height="300" src="//jsfiddle.net/4gLLgw4s/7/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 
 
 ```
