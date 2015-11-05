@@ -50,9 +50,11 @@ X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
 
 
 
-### Integration example (HTML + Code)
+### Integration example
 
 http://jsfiddle.net/gjh5xzfo/1/
+
+<iframe width="100%" height="300" src="//jsfiddle.net/gjh5xzfo/1/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## Customer Login with email and password hash
 
