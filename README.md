@@ -10,7 +10,9 @@ http://digital-extension.dev.konabackend.com
 
 ## Create new Customer
 
-Example
+First you need the **Touchpoint Token** to submit by header
+
+### Request
 ```
 POST /customers
 Content-Type: application/json
@@ -48,6 +50,40 @@ X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
 }
 ```
 
+### Possible responses
+
+#### Error messages
+
+** Body error messages **
+
+The body response has the following format
+
+```js
+{
+  "message" : "hash is required",
+  "code: 20,
+  "field" : "hash"
+}
+```
+
+
+| HTTP STATUS CODE | MESSAGE                                           | FIELD     |
+|------------------|---------------------------------------------------|-----------|
+| 400              | hash is required                                  | hash      |
+| 400              | hash invalid, the mínimum length is 6             | hash      |
+| 400              | firstName is required                             | firstName |
+| 400              | email is required                                 | email     |
+| 400              | birthday is required                              | birthday  |
+| 400              | gender is required                                | gender    |
+| 400              | Invalid gender, accepted values are 'M' or 'F'    | gender    |
+| 400              | Invalid birthday, accepted format is 'yyyy-mm-dd' | birthday  |
+
+** Invalid headers **
+
+| HTTP STATUS CODE | MESSAGE                                           | FIELD              | CODE |
+|------------------|---------------------------------------------------|--------------------|------|
+| 400              | X-TOUCHPOINT-TOKEN Header is required             | X-TOUCHPOINT-TOKEN | 10   |
+| 400              | Invalid X-TOUCHPOINT-TOKEN                        | X-TOUCHPOINT-TOKEN | 11   |
 
 
 ### Integration example
