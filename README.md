@@ -56,7 +56,16 @@ X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
 
 #### Success
 
-HTTP STATUS CODE: 200
+- HTTP STATUS CODE: 200
+
+- BODY
+
+```
+{
+    "_id": "56421ef5b0e835dcde17bbcb",
+...
+```
+
 
 #### Error messages
 
@@ -120,7 +129,14 @@ X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
 
 #### Success
 
-HTTP STATUS CODE: 200
+- HTTP STATUS CODE: 200
+- BODY
+
+```
+{
+    "token": "VhcD2ACEZTMX4V5azM/HM3E1kNl9WYbrjCAA9a/YZsE="
+}
+```
 
 #### Error messages
 
@@ -184,7 +200,14 @@ Cache-Control: no-cache
 
 #### Success
 
-HTTP STATUS CODE: 200
+- HTTP STATUS CODE: 200
+- BODY
+
+```
+{
+    "token": "VhcD2ACEZTMX4V5azM/HM3E1kNl9WYbrjCAA9a/YZsE="
+}
+```
 
 #### Error messages
 
@@ -239,7 +262,7 @@ Cache-Control: no-cache
 
 #### Success
 
-HTTP STATUS CODE: 200
+- HTTP STATUS CODE: 200
 
 #### Error messages
 
@@ -286,7 +309,7 @@ Cache-Control: no-cache
 
 #### Success
 
-HTTP STATUS CODE: 200
+- HTTP STATUS CODE: 200
 
 #### Error messages
 
