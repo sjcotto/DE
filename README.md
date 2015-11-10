@@ -50,7 +50,11 @@ X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
 }
 ```
 
-### Possible responses
+### Response
+
+#### Success
+
+HTTP STATUS CODE: 200
 
 #### Error messages
 
@@ -61,7 +65,7 @@ The body response has the following format
 ```js
 {
   "message" : "hash is required",
-  "code: 20,
+  "code": 20,
   "field" : "hash"
 }
 ```
@@ -86,7 +90,7 @@ The body response has the following format
 | 400              | Invalid X-TOUCHPOINT-TOKEN                        | X-TOUCHPOINT-TOKEN | 11   |
 
 
-### Integration example
+### JS Integration example
 
 http://jsfiddle.net/gjh5xzfo/1/
 
@@ -94,10 +98,9 @@ http://jsfiddle.net/gjh5xzfo/1/
 
 ## Customer Login with email and password hash
 
+You need the **Touchpoint Token** to submit by header
 
-*X-TOUCHPOINT-TOKEN* is the Touchpoint token
-
-Example
+### Request
 ```
 POST /customers/login
 Content-Type: application/json
@@ -109,19 +112,55 @@ X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
 }
 ```
 
-### Integration example
+### Response
+
+#### Success
+
+HTTP STATUS CODE: 200
+
+#### Error messages
+
+** Body error messages **
+
+The body response has the following format
+
+```js
+{
+  "message" : "hash is required",
+  "code": 20,
+  "field" : "hash"
+}
+```
+
+
+| HTTP STATUS CODE | MESSAGE                                           | FIELD     |
+|------------------|---------------------------------------------------|-----------|
+| 400              | hash is required                                  | hash      |
+| 400              | hash invalid, the mínimum length is 6             | hash      |
+| 400              | email is required                                 | email     |
+
+
+** Invalid headers **
+
+| HTTP STATUS CODE | MESSAGE                                           | FIELD              | CODE |
+|------------------|---------------------------------------------------|--------------------|------|
+| 400              | X-TOUCHPOINT-TOKEN Header is required             | X-TOUCHPOINT-TOKEN | 10   |
+| 400              | Invalid X-TOUCHPOINT-TOKEN                        | X-TOUCHPOINT-TOKEN | 11   |
+| 400              | Customer email not found                          | email              | 20   |
+| 400              | Customer email not found on Touchpoint            | email              | 21   |
+| 400              | Invalid User or Password                          | email              | 22   |
+
+### JS Integration example
 
 http://jsfiddle.net/gng3o5sm/5/
 
 <iframe width="100%" height="300" src="//jsfiddle.net/gng3o5sm/5/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-
-
 ## Customer Facebook login
 
-*X-FACEBOOK-TOKEN* is the Facebook access token
+You need the **Touchpoint Token** to submit by header and the facebook access token https://developers.facebook.com/docs/facebook-login/access-tokens
 
-Example
+### Request
 ```
 POST /customers/login-with-facebook HTTP/1.1
 Content-Type: application/json
@@ -132,15 +171,45 @@ Cache-Control: no-cache
 {}
 ```
 
-### Integration example
+### Response
 
-http://jsfiddle.net/5uuwqdzd/4/
+#### Success
 
-<iframe width="100%" height="300" src="//jsfiddle.net//5uuwqdzd/4/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+HTTP STATUS CODE: 200
+
+#### Error messages
+
+The body response has the following format
+
+```js
+{
+  "message" : "",
+  "code": 20,
+  "field" : ""
+}
+```
+
+** Invalid headers **
+
+| HTTP STATUS CODE | MESSAGE                                           | FIELD              | CODE |
+|------------------|---------------------------------------------------|--------------------|------|
+| 400              | X-TOUCHPOINT-TOKEN Header is required             | X-TOUCHPOINT-TOKEN | 10   |
+| 400              | Invalid X-TOUCHPOINT-TOKEN                        | X-TOUCHPOINT-TOKEN | 11   |
+| 400              | X-FACEBOOK-TOKEN Header is required               | X-FACEBOOK-TOKEN   | 25   |
+| 500              | [FB error]                                        | X-FACEBOOK-TOKEN   | -    |
+
+
+### JS Integration example
+
+http://jsfiddle.net/5uuwqdzd/5/
+
+<iframe width="100%" height="300" src="//jsfiddle.net//5uuwqdzd/5/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## Customer update profile
 
-Example
+You need the **Touchpoint Token** to submit by header and the X-CUSTOMER-DIGITAL-EXTENSION-TOKEN from the login API.
+
+### Request
 ```
 PUT /customers HTTP/1.1
 Content-Type: application/json
@@ -151,7 +220,40 @@ Cache-Control: no-cache
 { "jobTitle" : "Software Architect", "title" : "Ing", "hash" : "1234567" }
 ```
 
-### Integration example
+
+{}
+```
+
+### Response
+
+#### Success
+
+HTTP STATUS CODE: 200
+
+#### Error messages
+
+The body response has the following format
+
+```js
+{
+  "message" : "",
+  "code": 20,
+  "field" : ""
+}
+```
+
+** Invalid headers **
+
+| HTTP STATUS CODE | MESSAGE                                           | FIELD              | CODE |
+|------------------|---------------------------------------------------|--------------------|------|
+| 400              | X-TOUCHPOINT-TOKEN Header is required             | X-TOUCHPOINT-TOKEN | 10   |
+| 400              | Invalid X-TOUCHPOINT-TOKEN                        | X-TOUCHPOINT-TOKEN | 11   |
+| 400              | X-FACEBOOK-TOKEN Header is required               | X-FACEBOOK-TOKEN   | 25   |
+| 500              | [FB error]                                        | X-FACEBOOK-TOKEN   | -    |
+
+```
+
+### JS Integration example
 
 http://jsfiddle.net/4gLLgw4s/1/
 
@@ -159,9 +261,9 @@ http://jsfiddle.net/4gLLgw4s/1/
 
 ## Fire Interaction
 
-Example
+### Request
 ```
-POST /customers/interaction/5633a9b08ee14028271581f0
+POST /interactions/5633a9b08ee14028271581f0
 Content-Type: application/json
 X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
 X-CUSTOMER-DIGITAL-EXTENSION-TOKEN: OpENRcnBByUWi/8Fcj/TxeWpupWM6mLracPHbezoHvI=
