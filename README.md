@@ -162,7 +162,7 @@ You need the **Touchpoint Token** to submit by header and the facebook access to
 
 ### Request
 ```
-POST /customers/login-with-facebook HTTP/1.1
+POST /customers/fb-login HTTP/1.1
 Content-Type: application/json
 X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
 X-FACEBOOK-TOKEN: CAACEdEose0cBACKhtEKEa13dDACB30yd6E8JavLaEv61OovqTIQcvw0jXjNwAimi0rf8AGLHAxRZAq8WXiPp30ooC3MWElwLgcyuaIZAf0Nba7QypVJtVLGyp2SUN3wCIJeGKiKdrOsXCA0inx28iUCL7DTeF9X2JYuUjlF37JUOvfY0IQZCZCo0lsKwOAJraq17UuTZAnnqAMNrSp2hs
@@ -218,10 +218,7 @@ X-CUSTOMER-DIGITAL-EXTENSION-TOKEN: OpENRcnBByUWi/8Fcj/TxeWpupWM6mLracPHbezoHvI=
 Cache-Control: no-cache
 
 { "jobTitle" : "Software Architect", "title" : "Ing", "hash" : "1234567" }
-```
 
-
-{}
 ```
 
 ### Response
@@ -232,26 +229,15 @@ HTTP STATUS CODE: 200
 
 #### Error messages
 
-The body response has the following format
-
-```js
-{
-  "message" : "",
-  "code": 20,
-  "field" : ""
-}
-```
-
 ** Invalid headers **
 
 | HTTP STATUS CODE | MESSAGE                                           | FIELD              | CODE |
 |------------------|---------------------------------------------------|--------------------|------|
 | 400              | X-TOUCHPOINT-TOKEN Header is required             | X-TOUCHPOINT-TOKEN | 10   |
 | 400              | Invalid X-TOUCHPOINT-TOKEN                        | X-TOUCHPOINT-TOKEN | 11   |
-| 400              | X-FACEBOOK-TOKEN Header is required               | X-FACEBOOK-TOKEN   | 25   |
-| 500              | [FB error]                                        | X-FACEBOOK-TOKEN   | -    |
+| 400              | X-CUSTOMER-DIGITAL-EXTENSION-TOKEN Header is required | X-CUSTOMER-DIGITAL-EXTENSION-TOKEN   | 23   |
+| 400              |Invalid X-CUSTOMER-DIGITAL-EXTENSION-TOKEN | X-CUSTOMER-DIGITAL-EXTENSION-TOKEN | 24   |
 
-```
 
 ### JS Integration example
 
@@ -261,9 +247,18 @@ http://jsfiddle.net/4gLLgw4s/1/
 
 ## Fire Interaction
 
+** Required headers **
+
+- X-TOUCHPOINT-TOKEN
+- X-CUSTOMER-DIGITAL-EXTENSION-TOKEN
+
+** Required URL params **
+
+- Interaction ID
+
 ### Request
 ```
-POST /interactions/5633a9b08ee14028271581f0
+POST /interactions/:id
 Content-Type: application/json
 X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
 X-CUSTOMER-DIGITAL-EXTENSION-TOKEN: OpENRcnBByUWi/8Fcj/TxeWpupWM6mLracPHbezoHvI=
@@ -272,12 +267,31 @@ Cache-Control: no-cache
 { "test" : "hola" }
 
 ```
-### Integration example
+
+### Response
+
+#### Success
+
+HTTP STATUS CODE: 200
+
+#### Error messages
+
+** Invalid headers **
+
+| HTTP STATUS CODE | MESSAGE                                           | FIELD              | CODE |
+|------------------|---------------------------------------------------|--------------------|------|
+| 400              | X-TOUCHPOINT-TOKEN Header is required             | X-TOUCHPOINT-TOKEN | 10   |
+| 400              | Invalid X-TOUCHPOINT-TOKEN                        | X-TOUCHPOINT-TOKEN | 11   |
+| 400              | X-CUSTOMER-DIGITAL-EXTENSION-TOKEN Header is required | X-CUSTOMER-DIGITAL-EXTENSION-TOKEN   | 23   |
+| 400              |Invalid X-CUSTOMER-DIGITAL-EXTENSION-TOKEN | X-CUSTOMER-DIGITAL-EXTENSION-TOKEN | 24   |
 
 
-http://jsfiddle.net/4gLLgw4s/7/
+### JS Integration example
 
-<iframe width="100%" height="300" src="//jsfiddle.net/4gLLgw4s/7/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+http://jsfiddle.net/4gLLgw4s/9/
+
+<iframe width="100%" height="300" src="//jsfiddle.net/4gLLgw4s/9/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
 
