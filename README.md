@@ -10,7 +10,9 @@ http://digital-extension.dev.konabackend.com
 
 ## Create new Customer
 
-First you need the **Touchpoint Token** to submit by header
+** Required headers **
+
+- X-TOUCHPOINT-TOKEN
 
 ### Request
 ```
@@ -98,7 +100,9 @@ http://jsfiddle.net/gjh5xzfo/1/
 
 ## Customer Login with email and password hash
 
-You need the **Touchpoint Token** to submit by header
+** Required headers **
+
+- X-TOUCHPOINT-TOKEN
 
 ### Request
 ```
@@ -158,7 +162,12 @@ http://jsfiddle.net/gng3o5sm/5/
 
 ## Customer Facebook login
 
-You need the **Touchpoint Token** to submit by header and the facebook access token https://developers.facebook.com/docs/facebook-login/access-tokens
+** Required headers **
+
+- X-TOUCHPOINT-TOKEN
+- X-FACEBOOK-TOKEN
+
+Facebook access token https://developers.facebook.com/docs/facebook-login/access-tokens
 
 ### Request
 ```
@@ -207,7 +216,12 @@ http://jsfiddle.net/5uuwqdzd/5/
 
 ## Customer update profile
 
-You need the **Touchpoint Token** to submit by header and the X-CUSTOMER-DIGITAL-EXTENSION-TOKEN from the login API.
+** Required headers **
+
+- X-TOUCHPOINT-TOKEN
+- X-CUSTOMER-DIGITAL-EXTENSION-TOKEN
+
+The X-CUSTOMER-DIGITAL-EXTENSION-TOKEN from the login API body response.
 
 ### Request
 ```
