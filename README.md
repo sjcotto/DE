@@ -5,7 +5,7 @@
 *Endpoint Development*
 
 ```
-https://api.pernod-ricard.io/pr-latam/staging/v1
+http://digital-extension.dev.konabackend.com
 ```
 
 ## Create new Customer
