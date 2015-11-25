@@ -282,6 +282,72 @@ http://jsfiddle.net/4gLLgw4s/1/
 
 <iframe width="100%" height="300" src="//jsfiddle.net/4gLLgw4s/1/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
+## Logout
+
+** Required headers **
+
+- X-TOUCHPOINT-TOKEN
+- X-CUSTOMER-DIGITAL-EXTENSION-TOKEN
+
+### Request
+```
+POST /consumers/logout
+Content-Type: application/json
+X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
+X-CUSTOMER-DIGITAL-EXTENSION-TOKEN: OpENRcnBByUWi/8Fcj/TxeWpupWM6mLracPHbezoHvI=
+Cache-Control: no-cache
+
+```
+### Response
+
+#### Success
+
+- HTTP STATUS CODE: 200
+
+#### Error messages
+
+** Invalid headers **
+
+| HTTP STATUS CODE | MESSAGE                                           | FIELD              | CODE |
+|------------------|---------------------------------------------------|--------------------|------|
+| 400              | X-TOUCHPOINT-TOKEN Header is required             | X-TOUCHPOINT-TOKEN | 10   |
+| 400              | Invalid X-TOUCHPOINT-TOKEN                        | X-TOUCHPOINT-TOKEN | 11   |
+| 400              | X-CUSTOMER-DIGITAL-EXTENSION-TOKEN Header is required | X-CUSTOMER-DIGITAL-EXTENSION-TOKEN   | 23   |
+| 400              |Invalid X-CUSTOMER-DIGITAL-EXTENSION-TOKEN | X-CUSTOMER-DIGITAL-EXTENSION-TOKEN | 24   |
+
+
+## Recovery password
+
+** Required headers **
+
+- X-TOUCHPOINT-TOKEN
+
+### Request
+```
+POST /consumers/recovery-password
+Content-Type: application/json
+X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
+Cache-Control: no-cache
+
+{ email : consumer@email.com}
+```
+### Response
+
+#### Success
+
+- HTTP STATUS CODE: 200
+
+#### Error messages
+
+** Invalid headers **
+
+| HTTP STATUS CODE | MESSAGE                                           | FIELD              | CODE |
+|------------------|---------------------------------------------------|--------------------|------|
+| 400              | X-TOUCHPOINT-TOKEN Header is required             | X-TOUCHPOINT-TOKEN | 10   |
+| 400              | Invalid X-TOUCHPOINT-TOKEN                        | X-TOUCHPOINT-TOKEN | 11   |
+
+This operation send a email to the email inside payload
+
 ## Fire Interaction
 
 ** Required headers **
