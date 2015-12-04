@@ -38,19 +38,20 @@ X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
   "address": {
     "line1": "string",
     "line2": "string",
-    "line3": "string",
-    "line4": "string",
     "postCode": "string",
     "city": "string",
-    "country": "string"
+    "countryCode": "string"
   },
   "phone": {
     "mobile": "string",
     "personal": "string",
     "professional": "string"
-  }
+  },
+  "optInBrand" : true
 }
 ```
+
+The boolean optInBrand indicates that the consumer accepted the brand
 
 ### Response
 
