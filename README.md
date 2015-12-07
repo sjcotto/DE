@@ -26,7 +26,6 @@ X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
   "lastName": "string",
   "email": "string",
   "birthday": "string",
-  "country": "string",
   "language": "string",
   "gender": "string",
   "title": "string",
