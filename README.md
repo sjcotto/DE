@@ -21,30 +21,30 @@ Content-Type: application/json
 X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
 
 {
-  "hash": "string",
-  "firstName": "string",
-  "lastName": "string",
-  "email": "string",
-  "birthday": "string",
-  "language": "string",
-  "gender": "string",
-  "title": "string",
-  "jobTitle": "string",
-  "weiboId": "string",
-  "identifyNumber": "string",
-  "luxuarytrue": "string",
-  "type": "string",
+  "hash": "123456",
+  "firstName": "Consumer 2 name",
+  "lastName": "Consumer last name",
+  "email": "c6@email.com",
+  "birthday": "1989-06-20",
+  "languageCode": "es",
+  "gender": "M",
+  "title": "Ingeniero",
+  "jobTitle": "Ingeniero",
+  "type" : "CI",
+  "identifyNumber": "4492569",
+  "luxuarytrue" : "true",
+  "type": "CI",
+  "countryCode": "uy",
   "address": {
-    "line1": "string",
-    "line2": "string",
-    "postCode": "string",
-    "city": "string",
-    "countryCode": "string"
+    "line1": "Benito blanco 780",
+    "postCode": "11220",
+    "city": "Montevideo",
+    "state": "Montevideo"
   },
   "phone": {
-    "mobile": "string",
-    "personal": "string",
-    "professional": "string"
+    "mobile": "123",
+    "personal": "456",
+    "professional": "789"
   },
   "optInBrand" : true
 }
