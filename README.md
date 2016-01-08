@@ -187,7 +187,7 @@ Facebook access token https://developers.facebook.com/docs/facebook-login/access
 
 ### Request
 ```
-POST /consumers/fb-login HTTP/1.1
+POST /consumers/login-fb HTTP/1.1
 Content-Type: application/json
 X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
 X-FACEBOOK-TOKEN: CAACEdEose0cBACKhtEKEa13dDACB30yd6E8JavLaEv61OovqTIQcvw0jXjNwAimi0rf8AGLHAxRZAq8WXiPp30ooC3MWElwLgcyuaIZAf0Nba7QypVJtVLGyp2SUN3wCIJeGKiKdrOsXCA0inx28iUCL7DTeF9X2JYuUjlF37JUOvfY0IQZCZCo0lsKwOAJraq17UuTZAnnqAMNrSp2hs
