@@ -46,7 +46,8 @@ X-TOUCHPOINT-TOKEN: 91bc44b5-2bde-a04b-6e4b-1253b00231e6
     "personal": "456",
     "professional": "789"
   },
-  "optInBrand" : true
+  "optInBrand" : true,
+  "optInPernodRicard" : true
 }
 ```
 
