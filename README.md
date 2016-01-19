@@ -5,7 +5,7 @@
 *Endpoint Development*
 
 ```
-https://api.pernod-ricard.io/pr-latam/staging/v1/
+https://api.pernod-ricard.io/pr-latam/v1/
 ```
 
 ## Create new Customer
