@@ -397,5 +397,27 @@ http://jsfiddle.net/4gLLgw4s/9/
 <iframe width="100%" height="300" src="//jsfiddle.net/4gLLgw4s/9/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
+# Event Management
 
-```
+## Subscribe to Event
+
+### Request for DEV
+
+POST /interactions/570d3c1a854c183b04e4263a HTTP/1.1
+Content-Type: application/json
+X-TOUCHPOINT-TOKEN: **
+X-CUSTOMER-DIGITAL-EXTENSION-TOKEN: **
+Cache-Control: no-cache
+
+{ "Evento_Seleccionado" : "EventKey" }
+
+### Request for PROD
+
+POST /interactions/57183f9f52da4b282ff9f1d2 HTTP/1.1
+Content-Type: application/json
+X-TOUCHPOINT-TOKEN: **
+X-CUSTOMER-DIGITAL-EXTENSION-TOKEN: **
+Cache-Control: no-cache
+
+{ "Evento_Seleccionado" : "EventKey" }
+
